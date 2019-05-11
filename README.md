@@ -161,6 +161,12 @@ Address
 
 ## Process
 
+#### Saturday 5/10/2019
+__
+
+#### Friday 5/10/2019
+_Wasn't feeling very good today. Only did about a half day of work. I started making the layout of the app and getting needed packages set up. Will continue working on it over the weekend._
+
 #### Monday 5/6/2019
 _Made some minor fixes to the README._
 
