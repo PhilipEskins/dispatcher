@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Main from './components/dispatchboard/Main';
 import Employee from './components/employee/Employee';
 import NewEmployee from './components/employee/NewEmployee';
+import NewEmployeeQuestions from './components/employee/NewEmployeeQuestions'
 import WorkOrders from './components/workorders/WorkOrders';
 import Customers from './components/customers/Customers';
 import Error404 from './components/Error404';
@@ -19,7 +20,8 @@ function App() {
         <Route path='/employee' component={Employee} />
         <Route path='/workorders' component={WorkOrders} />
         <Route path='/customers' component={Customers} />
-        <Route path='/newemployee' component={NewEmployee} />
+        <Route exact path='/newemployee' component={NewEmployee} />
+        <Route path='/newemployeequestions' component={NewEmployeeQuestions} />
         <Route component={Error404} />
       </Switch>
     </div>

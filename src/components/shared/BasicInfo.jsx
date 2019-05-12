@@ -1,8 +1,8 @@
 import React from 'react';
-// import NewEmployee from '../employee/NewEmployee';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { updateInfo } from './../../actions';
+import { Link } from 'react-router-dom';
 
 function BasicInfo(props) {
 
@@ -13,6 +13,7 @@ function BasicInfo(props) {
   let _state = null;
   let _zip = null;
   let _phone = null;
+  let path = null;
 
   function reduxInfo() {
     const { dispatch } = props;
@@ -26,17 +27,17 @@ function BasicInfo(props) {
       phoneInput: _phone.value,
     }
     dispatch(updateInfo(newInfo));
+    pathCheck();
   }
 
-
-  // let path = null;
-  // function pathCheck() {
-  //   if (props.location === '/newemployee') {
-  //     return (<NewEmployee />);
-  //   } else {
-  //     console.log(false);
-  //   }
-  // }
+  function pathCheck() {
+    if (props.location === '/newemployee') {
+      path = '/newemployeequestions';
+    } else {
+      console.log(false);
+    }
+    console.log(path);
+  }
 
   return (
     <div>
@@ -54,7 +55,7 @@ function BasicInfo(props) {
       <input id='zip' type='number' ref={(input) => {_zip = input;}}/><br />
       <label htmlFor='phone'>Phone:</label>
       <input id='phone' type='tel' ref={(input) => {_phone = input;}}/> <br />
-      <button type='button' onClick={reduxInfo}>Next</button>
+      <button type='button' onClick={reduxInfo}><Link to={path}> Next</Link></button>
     </div>
   );
 }

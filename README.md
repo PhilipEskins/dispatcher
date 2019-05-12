@@ -161,6 +161,12 @@ Address
 
 ## Process
 
+#### Sunday 5/11/2019
+_Put in a couple more hours on this project._
+* 1:00 pm to 2:00 pm - Implemented the redux into the app.
+* 2:00 pm to 3:00 pm - Hooked up the BasicInfo component to store the inputted text into redux.
+* 4:00 pm to 4:30 pm - Tried to get it so once you hit submit on the BasicInfo component it'll take you to another component, but wasn't able to get it working correctly. Will think on it more and may get help on Monday.
+
 #### Saturday 5/10/2019
 _Went to a Mentorship Saturday meetup and was able to work some more on my code._
 * 11:00am to 12:00pm - Made new folders for my components to help organize them better in the future. Also decided on a starting point with employee's and started working on that component.
