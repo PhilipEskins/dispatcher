@@ -162,7 +162,9 @@ Address
 ## Process
 
 #### Saturday 5/10/2019
-__
+_Went to a Mentorship Saturday meetup and was able to work some more on my code._
+* 11:00am to 12:00pm - Made new folders for my components to help organize them better in the future. Also decided on a starting point with employee's and started working on that component.
+* 12:00pm to 1:00pm - Created form for adding a new employee, it's not hooked up to anything yet, Tried making a 'basic info' component that I can reuse with the add new customer form, still trying to figure out how to make that work though.
 
 #### Friday 5/10/2019
 _Wasn't feeling very good today. Only did about a half day of work. I started making the layout of the app and getting needed packages set up. Will continue working on it over the weekend._

@@ -15,17 +15,17 @@ function BasicInfo(props) {
 
   return (
     <div>
-      <label for='fname'>First Name:</label>
+      <label htmlFor='fname'>First Name:</label>
       <input id='fname' type='input' /><br />
-      <label for='lname'>Last Name:</label>
+      <label htmlFor='lname'>Last Name:</label>
       <input id='lname' type='input' /><br />
-      <label for='address'>Address:</label>
+      <label htmlFor='address'>Address:</label>
       <input id='address' type='input' /><br />
-      <label for='city'>City:</label>
+      <label htmlFor='city'>City:</label>
       <input id='city' type='input' /><br />
-      <label for='state'>State:</label>
+      <label htmlFor='state'>State:</label>
       <input id='state' type='input' /><br />
-      <label for='zip'>Zip:</label>
+      <label htmlFor='zip'>Zip:</label>
       <input id='zip' type='zip' /><br />
       <button type='button' onClick={pathCheck}>Next</button>
     </div>
