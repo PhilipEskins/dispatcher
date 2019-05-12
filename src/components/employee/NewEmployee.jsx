@@ -9,10 +9,6 @@ function NewEmployee(props) {
       <h3>Add new Employee</h3>
       <form>
         <BasicInfo location={props.location.pathname}/>
-        <label htmlFor='wage'>Wage/Rate:</label>
-        <input id='wage' type='input' /><br />
-        <label htmlFor='hire'>Hire Date:</label>
-        <input id='hire' type='date' /><br />
       </form>
     </div>
   );
@@ -23,3 +19,8 @@ NewEmployee.propTypes = {
 };
 
 export default NewEmployee;
+
+// <label htmlFor='wage'>Wage/Rate:</label>
+// <input id='wage' type='input' /><br />
+// <label htmlFor='hire'>Hire Date:</label>
+// <input id='hire' type='date' /><br />
