@@ -6,6 +6,7 @@ function Employee() {
     <div>
       <h2>Employee Works</h2>
       <p><Link to='/newemployee'>Add new Employee</Link></p>
+      <p><Link to='/employeelist'>View Employees</Link></p>
     </div>
   );
 }
