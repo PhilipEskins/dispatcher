@@ -11,5 +11,5 @@ export function updateInfo(newInfo) {
     stateInput: newInfo.stateInput,
     zipInput: newInfo.zipInput,
     phoneInput: newInfo.phoneInput,
-  }
+  };
 }

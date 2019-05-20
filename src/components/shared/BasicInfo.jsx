@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { updateInfo } from './../../actions';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 function BasicInfo(props) {
 
@@ -25,18 +26,17 @@ function BasicInfo(props) {
       stateInput: _state.value,
       zipInput: _zip.value,
       phoneInput: _phone.value,
-    }
+    };
     dispatch(updateInfo(newInfo));
     pathCheck();
   }
 
   function pathCheck() {
-    if (props.location === '/newemployee') {
-      path = '/newemployeequestions';
+    if (props.location.pathname === '/newemployee') {
+      props.history.push('/newemployeequestions');
     } else {
       console.log(false);
     }
-    console.log(path);
   }
 
   return (
@@ -62,7 +62,8 @@ function BasicInfo(props) {
 
 BasicInfo.propTypes = {
   location: PropTypes.string,
-  dispatch: PropTypes.func
+  dispatch: PropTypes.func,
+  history: PropTypes.string,
 };
 
-export default connect()(BasicInfo);
+export default withRouter(connect()(BasicInfo));

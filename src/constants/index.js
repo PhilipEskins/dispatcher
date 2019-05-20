@@ -4,4 +4,4 @@ import { initialState } from './initial-state';
 export default {
   type,
   initialState,
-}
+};

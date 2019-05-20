@@ -6,4 +6,4 @@ export const initialState = {
   stateInput: '',
   zipInput: '',
   phoneInput: '',
-}
+};

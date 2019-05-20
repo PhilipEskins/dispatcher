@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Main from './components/dispatchboard/Main';
 import Employee from './components/employee/Employee';
 import NewEmployee from './components/employee/NewEmployee';
-import NewEmployeeQuestions from './components/employee/NewEmployeeQuestions'
+import NewEmployeeQuestions from './components/employee/NewEmployeeQuestions';
 import WorkOrders from './components/workorders/WorkOrders';
 import Customers from './components/customers/Customers';
 import Error404 from './components/Error404';
