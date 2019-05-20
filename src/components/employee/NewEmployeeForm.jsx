@@ -2,13 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function NewEmployeeForm(props) {
+  console.log(props);
   return(
-    <h1>New Employee Form works</h1>
-  )
+    <div>
+      <h1>New Employee Form works</h1>
+      {props.technician}
+    </div>
+  );
 }
 
 NewEmployeeForm.propTypes = {
-  location: PropTypes.bool
+  technician: PropTypes.bool
 };
 
 export default NewEmployeeForm;
