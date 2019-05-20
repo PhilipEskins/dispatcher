@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import * as actions from './../../actions/firebase';
 
 class EmployeeList extends React.Component {
@@ -16,7 +16,7 @@ class EmployeeList extends React.Component {
       <div>
         <h1>Employee List Works</h1>
       </div>
-    )
+    );
   }
 }
 

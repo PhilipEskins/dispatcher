@@ -161,6 +161,9 @@ Address
 
 ## Process
 
+#### Monday 5/20/2019
+_Final week at Epicodus. Today I spent time trying to get the forms to function the way I wanted and it didn't go well. Decided to drop the path I was going down and start a new branch. Made more progress going that route. Implemented a Firebase connection and got framework set up to display the info from the database._
+
 #### Sunday 5/11/2019
 _Put in a couple more hours on this project._
 * 1:00 pm to 2:00 pm - Implemented the redux into the app.
