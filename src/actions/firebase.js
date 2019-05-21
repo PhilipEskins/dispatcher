@@ -19,15 +19,11 @@ export function addEmployee(newEmployeeInfo) {
   });
 }
 
-/* eslint-disable */
 export function watchEmployee() {
   return function(dispatch) {
-    employee.on('child_added', data => {
-      const employeeList = Object.assign({}, data.val(), {
-        id: data.key,
-      });
+    employee.on('value', data => {
+      const employeeList = data.val()
       dispatch(receiveEmployee(employeeList));
     });
   };
 }
-/* eslint-enable */

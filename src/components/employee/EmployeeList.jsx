@@ -12,15 +12,27 @@ class EmployeeList extends React.Component {
   }
 
   render() {
-    let firstName = null;
+    let testArr = [];
 
     if (this.props.employeeList) {
-      firstName = this.props.employeeList.firstName;
+      let displayList = Object.entries(this.props.employeeList);
+      console.log(displayList);
+      displayList.forEach(function(entry) {
+        let newEntry = Object.assign({}, entry[1], {
+          id: entry[0],
+        })
+        testArr.push(newEntry);
+        // console.log(entry[0]);
+        // testArr.push(entry[1]);
+      });
     }
+
     return(
       <div>
         <h1>Employee List Works</h1>
-        <p>{firstName}</p>
+        {testArr.map(function(entry) {
+          return <p key={entry.id}>{entry.firstName} {entry.lastName}</p>;
+        })}
       </div>
     );
   }
@@ -32,7 +44,6 @@ EmployeeList.propTypes = {
 };
 
 const mapStateToProps = state => {
-  console.log(state.employeeList);
   return {
     employeeList: state.employeeList,
   };
