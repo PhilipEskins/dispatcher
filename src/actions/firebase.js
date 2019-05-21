@@ -1,6 +1,6 @@
 import constants from './../constants';
 import Firebase from 'firebase';
-import { receiveEmployee } from './index';
+import { receiveEmployee, employeeInfoDisplay } from './index';
 const { firebaseConfig } = constants;
 
 Firebase.initializeApp(firebaseConfig);
@@ -24,6 +24,16 @@ export function watchEmployee() {
     employee.on('value', data => {
       const employeeList = data.val();
       dispatch(receiveEmployee(employeeList));
+    });
+  };
+}
+
+export function getEmployeeInfo(employeeId) {
+  return function(dispatch) {
+    const selectedEmployee = employee.child(employeeId);
+    selectedEmployee.once('value', snapshot => {
+      const values = snapshot.val();
+      dispatch(employeeInfoDisplay(values));
     });
   };
 }
