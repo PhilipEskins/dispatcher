@@ -1,9 +1,9 @@
-export const initialState = {
-  firstNameInput: '',
-  lastNameInput: '',
-  addressInput: '',
-  cityInput: '',
-  stateInput: '',
-  zipInput: '',
-  phoneInput: '',
-};
+// export const initialState = {
+//   firstNameInput: '',
+//   lastNameInput: '',
+//   addressInput: '',
+//   cityInput: '',
+//   stateInput: '',
+//   zipInput: '',
+//   phoneInput: '',
+// };

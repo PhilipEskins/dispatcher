@@ -22,7 +22,7 @@ export function addEmployee(newEmployeeInfo) {
 export function watchEmployee() {
   return function(dispatch) {
     employee.on('value', data => {
-      const employeeList = data.val()
+      const employeeList = data.val();
       dispatch(receiveEmployee(employeeList));
     });
   };
