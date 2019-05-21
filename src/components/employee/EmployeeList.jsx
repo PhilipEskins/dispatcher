@@ -12,9 +12,15 @@ class EmployeeList extends React.Component {
   }
 
   render() {
+    let firstName = null;
+
+    if (this.props.employeeList) {
+      firstName = this.props.employeeList.firstName;
+    }
     return(
       <div>
         <h1>Employee List Works</h1>
+        <p>{firstName}</p>
       </div>
     );
   }
@@ -26,6 +32,7 @@ EmployeeList.propTypes = {
 };
 
 const mapStateToProps = state => {
+  console.log(state.employeeList);
   return {
     employeeList: state.employeeList,
   };

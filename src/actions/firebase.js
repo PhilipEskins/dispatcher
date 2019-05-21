@@ -1,5 +1,6 @@
 import constants from './../constants';
 import Firebase from 'firebase';
+import { receiveEmployee } from './index';
 const { firebaseConfig } = constants;
 
 Firebase.initializeApp(firebaseConfig);
@@ -22,7 +23,10 @@ export function addEmployee(newEmployeeInfo) {
 export function watchEmployee() {
   return function(dispatch) {
     employee.on('child_added', data => {
-      console.log(data.val());
+      const employeeList = Object.assign({}, data.val(), {
+        id: data.key,
+      });
+      dispatch(receiveEmployee(employeeList));
     });
   };
 }

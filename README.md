@@ -41,6 +41,7 @@ _Features that would make this an awesome dispatching software. In no particular
 
 * _Download repository from https://github.com/PhilipEskins/dispatcher/_
 * _Type npm install in the dispatch directory in the terminal_
+* _Make a file in src/constants called firebaseConfig.js to hold your database connection information._
 * _Type npm run start and the website will open up in a new browser window_
 * _If you'd like to alter or see the code for the project, after downloading open the folder up in your favorite code editor._
 

@@ -13,3 +13,10 @@ export function updateInfo(newInfo) {
     phoneInput: newInfo.phoneInput,
   };
 }
+
+export function receiveEmployee(employeeListFromFirebase) {
+  return {
+    type: type.RECEIVE_EMPLOYEE,
+    employeeList: employeeListFromFirebase,
+  };
+}
