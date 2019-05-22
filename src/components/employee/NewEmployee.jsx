@@ -14,8 +14,9 @@ function NewEmployee(props) {
   let _zip = null;
   let _phone = null;
   let _email = null;
-  let _date =null;
+  // let _date =null;
 
+  // Sends data to Firebase
   function reduxPush() {
     const { dispatch } = props;
     let newEmployee = {
@@ -27,7 +28,7 @@ function NewEmployee(props) {
       zipInput: _zip.value,
       phoneInput: _phone.value,
       emailInput: _email.value,
-      dateInput: _date.value,
+      // dateInput: _date.value,
     };
     dispatch(addEmployee(newEmployee));
   }
@@ -51,8 +52,7 @@ function NewEmployee(props) {
       <input id='phone' type='tel' ref={(input) => {_phone = input;}}/> <br />
       <label htmlFor='email'>Email:</label>
       <input id='email' type='input' ref={(input) => {_email = input;}}/><br />
-      <label htmlFor='date'>Hire Date: </label>
-      <input id='data' type='date' ref={(input) => {_date = input;}}/><br />
+
       <button type='button' onClick={reduxPush}>Submit</button>
     </div>
   );
@@ -63,3 +63,6 @@ NewEmployee.propTypes = {
 };
 
 export default connect()(NewEmployee);
+
+// <label htmlFor='date'>Hire Date: </label>
+// <input id='data' type='date' ref={(input) => {_date = input;}}/><br />

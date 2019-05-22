@@ -7,6 +7,7 @@ import Employee from './components/employee/Employee';
 import NewEmployee from './components/employee/NewEmployee';
 import EmployeeList from './components/employee/EmployeeList';
 import EmployeeDetail from './components/employee/EmployeeDetail';
+import EmployeeEdit from './components/employee/EmployeeEdit';
 import WorkOrders from './components/workorders/WorkOrders';
 import Customers from './components/customers/Customers';
 import Error404 from './components/Error404';
@@ -24,6 +25,7 @@ function App() {
         <Route path='/newemployee' component={NewEmployee} />
         <Route path='/employeelist' component={EmployeeList} />
         <Route path='/employee/:lastName' component={EmployeeDetail} />
+        <Route path='/editemployee' component={EmployeeEdit} />
         <Route component={Error404} />
       </Switch>
     </div>

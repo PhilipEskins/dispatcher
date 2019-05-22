@@ -21,7 +21,6 @@ function EmployeeList(props) {
   //Checks to see if employeeList is populated, if so it pushes each employee into testArr
   if (props.employeeList) {
     let displayList = Object.entries(props.employeeList);
-    console.log(displayList);
     displayList.forEach(function(entry) {
       let newEntry = Object.assign({}, entry[1], {
         id: entry[0],

@@ -6,6 +6,7 @@ const { firebaseConfig } = constants;
 Firebase.initializeApp(firebaseConfig);
 const employee = Firebase.database().ref('employee');
 
+// Sends new Employee data to Firebase
 export function addEmployee(newEmployeeInfo) {
   return () => employee.push({
     firstName: newEmployeeInfo.firstNameInput,
@@ -19,6 +20,7 @@ export function addEmployee(newEmployeeInfo) {
   });
 }
 
+// Grabs the list of all Employees
 export function watchEmployee() {
   return function(dispatch) {
     employee.on('value', data => {
@@ -28,6 +30,7 @@ export function watchEmployee() {
   };
 }
 
+// Grabs one record in Employee database
 export function getEmployeeInfo(employeeId) {
   return function(dispatch) {
     const selectedEmployee = employee.child(employeeId);
