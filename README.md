@@ -162,6 +162,12 @@ Address
 
 ## Process
 
+#### Wednesday 5/22/2019
+_I was able to get the data to display when you click on an employee and it takes you to a new page that shows the employee details. I started working on an edit button, but I originally was going down the wrong path so it took awhile to realize that. Eventually I got the needed data to show up as a value in a input field that can be edited._
+
+#### Tuesday 5/21/2019
+_Made some good progress today. I decided to tryout using hooks in my React project and it worked out great. Got it to the point where it console logs the individual employee when you click on a name in the list._
+
 #### Monday 5/20/2019
 _Final week at Epicodus. Today I spent time trying to get the forms to function the way I wanted and it didn't go well. Decided to drop the path I was going down and start a new branch. Made more progress going that route. Implemented a Firebase connection and got framework set up to display the info from the database._
 

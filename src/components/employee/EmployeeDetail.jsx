@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getEmployeeInfo } from './../../actions/firebase';
+import EmployeeEdit from './EmployeeEdit';
+import './../../scss/employee.scss';
 
 function EmployeeDetail(props) {
   const { dispatch } = props;
@@ -11,14 +13,14 @@ function EmployeeDetail(props) {
     dispatch(getEmployeeInfo(props.employeeId));
   }, []);
 
-  let firstName = null;
-  let lastName = null;
-  let address = null;
-  let city = null;
-  let state = null;
-  let zip = null;
-  let phone = null;
-  let email = null;
+  let firstName = '';
+  let lastName = '';
+  let address = '';
+  let city = '';
+  let state = '';
+  let zip = '';
+  let phone = '';
+  let email = '';
 
   // Checks to see if data is available
   if (props.employeeInfo) {
@@ -32,9 +34,11 @@ function EmployeeDetail(props) {
     email = props.employeeInfo.email;
   }
 
+  let employeeEdit = document.getElementById('myModal');
+
   return (
     <div>
-      <h1>Employee Details</h1>
+      <h1 className='name'>Employee Details</h1>
       <p>
         {firstName} {lastName}<br />
         {address}<br />
@@ -42,7 +46,10 @@ function EmployeeDetail(props) {
         Phone: {phone}<br />
         Email: {email} <br />
       </p>
-      <button type='button'>Edit</button>
+      <button type='button' onClick={() => employeeEdit.style.display = 'block'}>Edit</button>
+      <div id='myModal' className="employeeEdit">
+        <EmployeeEdit employeeId = {props.employeeId}/>
+      </div>
     </div>
   );
 }
